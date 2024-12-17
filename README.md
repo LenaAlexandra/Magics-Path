@@ -1,0 +1,2 @@
+# Magics-Path
+minigame
