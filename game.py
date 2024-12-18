@@ -15,12 +15,20 @@ while run:
     screen.fill((0, 0, 0))
 
     pygame.draw.rect(screen, (255, 0, 0), player)
+    player.y = 550
 
     key = pygame.key.get_pressed()
     if key[pygame.K_a] == True:
         player.move_ip(-1, 0)
+    if key[pygame.K_d] == True:
+        player.move_ip(1, 0)
     
-    run = False
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            run = False
+    pygame.display.update()
+    
+    
 
 time.sleep(5)
 
